@@ -26,3 +26,24 @@ class ProfileView(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors)
+
+from .serializers import ForgotPasswordSerializer, ResetPasswordSerializer
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+class ForgotPasswordView(APIView):
+    def post(self, request):
+        serializer = ForgotPasswordSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"message": "Password reset link sent to email"})
+        return Response(serializer.errors)
+
+
+class ResetPasswordView(APIView):
+    def post(self, request):
+        serializer = ResetPasswordSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"message": "Password reset successful"})
+        return Response(serializer.errors)
