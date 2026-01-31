@@ -141,7 +141,9 @@ Contributions are welcome! Please:
 
 **Md. Al Baki Akon**  
 GitHub: [mdalbakiakon](https://github.com/mdalbakiakon)  
+LinkedIn: [mdalbakiakon](https://www.linkedin.com/in/md-al-baki-akon-352989362/)
 Email: mdalbakiakon@gmail.com
+
 
 
 ---
